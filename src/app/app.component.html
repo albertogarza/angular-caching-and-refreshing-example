@@ -1,0 +1,8 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<div *ngFor="let video of videos$ | async | slice:0:3">
+  <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(video['embed'])"></div>
+</div>
